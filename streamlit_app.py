@@ -44,6 +44,6 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
-#let's put a pick list here so they can pick the fruit they want to include
-fruit_added = streamlit.multiselect("What fruit would you like to add?")
-streamlit.text('Thanks for adding ', fruit_added)
+#New section to display fruityvice api response
+fruit_add = streamlit.text_input('What fruit would you like to add?')
+streamlit.write('Thanks for adding ', fruit_add)
